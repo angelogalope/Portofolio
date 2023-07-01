@@ -74,7 +74,7 @@ function App() {
             <img
               alt="Angelo2"
               className="w-[49px] h-[49px] hover:scale-110"
-              src="Tiktok.png"
+              src="TikTok.png"
             />
           </a>
           <a href="https://www.youtube.com/channel/UCQbPRkGcJmO6wkKQ0wFwp3Q">
