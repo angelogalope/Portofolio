@@ -1,4 +1,4 @@
-import "./App.css";
+import { Link } from "react-scroll";
 
 function App() {
   return (
@@ -6,16 +6,16 @@ function App() {
       {/* Navigation Bar */}
       <div className="w-[1324.02px] h-[73.48px] left-[297.99px] top-[23px] absolute">
         <button className="left-[906.01px] top-[15px] absolute text-zinc-950 text-[20px] font-semibold hover:text-slate-400">
-          <a href="#stack">Stack</a>
+          <Link to="stack" spy={true} smooth={true} offset={0} duration={500}>Stack</Link>
         </button>
         <button className="left-[779.01px] top-[15px] absolute text-zinc-950 text-[20px] font-semibold hover:text-slate-400">
-          <a href="#about">About</a>
+          <Link to="about" spy={true} smooth={true} offset={0} duration={500}>About</Link>
         </button>
         <button className="left-[1030.01px] top-[15px] absolute text-zinc-950 text-[20px] font-semibold hover:text-slate-400">
-          <a href="#project">Projects</a>
+          <Link to="project" spy={true} smooth={true} offset={0} duration={500}>Projects</Link>
         </button>
         <button className="left-[1177.01px] top-[15px] absolute text-zinc-950 text-[20px] font-semibold hover:text-slate-400">
-          <a href="#contact">Contact</a>
+          <Link to="contact" spy={true} smooth={true} offset={0} duration={500}>Contact</Link>
         </button>
         <img
           alt="Logo"
@@ -43,11 +43,13 @@ function App() {
           Hi! I am
         </div>
       </div>
-      <button class="w-[179px] h-[49px] left-[370px] top-[638px] absolute flex items-center justify-center bg-black rounded-lg space-x-2 hover:scale-110">
-        <img alt="MeIcon" class="w-6 h-6 ml-2" src="Me(icon).png" />
-        <div class="text-white text-[20px] font-normal">
-          <a href="#about">About Me</a>
-        </div>
+      <button>
+        <Link to="about" spy={true} smooth={true} offset={0} duration={500} class="w-[179px] h-[49px] left-[370px] top-[638px] absolute flex items-center justify-center bg-black rounded-lg space-x-2 hover:scale-110">
+          <img alt="MeIcon" class="w-6 h-6 ml-2" src="Me(icon).png" />
+          <div class="text-white text-[20px] font-normal">
+            About Me
+          </div>
+      </Link>
       </button>
       <div className="left-[1001px] top-[234px] absolute justify-start items-center inline-flex">
         <img
@@ -179,13 +181,15 @@ function App() {
         id="contact"
         className="w-[1903px] h-[120px] left-0 top-[2706px] absolute bg-gray-400"
       />
-      <a href="#home">
-        <img
-          alt="Angelo2"
-          className="w-[57px] h-[57px] left-[1708px] top-[2736px] absolute"
-          src="3 1.png"
-        />
-      </a>
+      <button>
+        <Link to="home" spy={true} smooth={true} offset={0} duration={500}>
+          <img
+            alt="Angelo2"
+            className="w-[57px] h-[57px] left-[1708px] top-[2736px] absolute"
+            src="3 1.png"
+          />
+        </Link>
+      </button>
       <div className="left-[155px] top-[2736px] absolute justify-end items-center inline-flex">
         <div className="self-stretch justify-start items-center gap-2.5 inline-flex">
           <img
