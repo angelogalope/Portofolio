@@ -1,10 +1,8 @@
 import { Link } from "react-scroll";
 
-function App() {
+const Navigation = () => {
   return (
-    <div id="home" className="w-[1903px] h-[2706px] bg-white">
-      {/* Navigation Bar */}
-      <div className="w-[1324.02px] h-[73.48px] left-[297.99px] top-[23px] absolute">
+    <div className="w-[1324.02px] h-[73.48px] left-[297.99px] top-[23px] absolute">
         <button className="left-[906.01px] top-[15px] absolute text-zinc-950 text-[20px] font-semibold hover:text-slate-400">
           <Link to="stack" spy={true} smooth={true} offset={0} duration={500}>Stack</Link>
         </button>
@@ -24,9 +22,12 @@ function App() {
         />
         <div className="w-[1324.02px] h-[0px] left-0 top-[73.48px] absolute border border-black"></div>
       </div>
+  );
+};
 
-      {/* Hero Page */}
-      <div className="w-[564px] h-[280px] left-[367px] top-[272px] absolute">
+const HeroSection = () => {
+  return (
+    <div className="w-[564px] h-[280px] left-[367px] top-[272px] absolute">
         <div class="w-[649px] h-[149px] left-0 top-[69px] absolute text-zinc-950 text-[64px] font-extrabold">
           <h1>
             Information &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Technology
@@ -43,15 +44,35 @@ function App() {
           Hi! I am
         </div>
       </div>
-      <button>
-        <Link to="about" spy={true} smooth={true} offset={0} duration={500} class="w-[179px] h-[49px] left-[370px] top-[638px] absolute flex items-center justify-center bg-black rounded-lg space-x-2 hover:scale-110">
+  );
+};
+
+const AboutButton = () => {
+  return (
+    <button>
+        <Link to="about" smooth={true} offset={0} duration={500} class="w-[179px] h-[49px] left-[370px] top-[638px] absolute flex items-center justify-center bg-black rounded-lg space-x-2 hover:scale-110">
           <img alt="MeIcon" class="w-6 h-6 ml-2" src="Me(icon).png" />
           <div class="text-white text-[20px] font-normal">
             About Me
           </div>
         </Link>
       </button>
+  );
+};
+
+function App () {
+  return (
+    <div>
+      <div id="home" className="w-[1903px] h-[2706px] bg-white">
+      {/* Navigation Bar */}
+      <Navigation />
+
+      {/* Hero Page */}
+      <HeroSection/>
+      <AboutButton/>
+      
         
+      
       <div className="left-[1001px] top-[234px] absolute justify-start items-center inline-flex">
         <img
           alt="Angelo2"
@@ -191,6 +212,7 @@ function App() {
           />
         </Link>
       </button>
+      
       <div className="left-[155px] top-[2736px] absolute justify-end items-center inline-flex">
         <div className="self-stretch justify-start items-center gap-2.5 inline-flex">
           <img
@@ -210,6 +232,7 @@ function App() {
         </div>
       </div>
 
+    </div>
     </div>
   );
 }
