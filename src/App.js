@@ -43,14 +43,12 @@ function App() {
           Hi! I am
         </div>
       </div>
-      <button>
         <Link to="about" spy={true} smooth={true} offset={0} duration={500} class="w-[179px] h-[49px] left-[370px] top-[638px] absolute flex items-center justify-center bg-black rounded-lg space-x-2 hover:scale-110">
           <img alt="MeIcon" class="w-6 h-6 ml-2" src="Me(icon).png" />
           <div class="text-white text-[20px] font-normal">
             About Me
           </div>
       </Link>
-      </button>
       <div className="left-[1001px] top-[234px] absolute justify-start items-center inline-flex">
         <img
           alt="Angelo2"
