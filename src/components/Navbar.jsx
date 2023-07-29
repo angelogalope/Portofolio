@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { HiMenu } from "react-icons/hi";
+import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 
-const Navbar = () => {
+const Navbar = ({ darkMode, toggleDarkMode }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -25,9 +26,13 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky top-0 bg-white">
+    <div className={`sticky top-0 ${darkMode ? "bg-gray-800" : "bg-white"}`}>
       <div className="flex items-center justify-between">
-        <img src="images/Logo.png" alt="logo" className="w-[34px] h-[34px] p-1" />
+        <img
+          src="images/Logo.png"
+          alt="logo"
+          className="w-[34px] h-[34px] p-1"
+        />
 
         {/* Mobile Menu */}
         {isMobile && (
@@ -43,24 +48,12 @@ const Navbar = () => {
         {!isMobile && (
           <div className="flex gap-20">
             <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400">
-              <Link
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
+              <Link to="about" spy={true} smooth={true} offset={0} duration={500}>
                 About
               </Link>
             </button>
             <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400">
-              <Link
-                to="stack"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
+              <Link to="stack" spy={true} smooth={true} offset={0} duration={500}>
                 Stack
               </Link>
             </button>
@@ -89,8 +82,13 @@ const Navbar = () => {
           </div>
         )}
 
-        {/* Dropdown Menu */}
-        {isMobile && isMenuOpen && (
+        {/* Dark Mode Toggle Button */}
+        <button onClick={toggleDarkMode}>
+          {darkMode ? <BsFillSunFill size={30} className="p-1 text-yellow-300 transition-all duration-500"/> : <BsFillMoonFill size={30} className="p-1 transition-all duration-500"/>}
+        </button>
+      </div>
+
+      {isMobile && isMenuOpen && (
           <div className="absolute top-12 left-0 w-full bg-white shadow-md py-2 rounded-b-lg border">
             <div className="flex flex-col items-center">
               <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400 mb-2 border-b w-full">
@@ -144,7 +142,6 @@ const Navbar = () => {
             </div>
           </div>
         )}
-      </div>
 
       <div className="flex border border-black"></div>
     </div>

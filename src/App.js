@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import { Link } from "react-scroll";
 import { BsFacebook, BsYoutube, BsGithub } from "react-icons/bs";
@@ -66,12 +67,18 @@ const HeroSection = () => {
 };
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
+  
   return (
-    <div id="home">
+    <div id="home" className={`${darkMode ? "bg-gray-800" : "bg-white"}`}>
       <div className="flex flex-col w-full h-full pt-5 px-[25px] md:px-[150px]">
 
         {/* Navigation Bar */}
-        <Navbar/>
+        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
         {/* Hero Section */}
         <HeroSection />

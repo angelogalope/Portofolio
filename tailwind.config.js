@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     sreens: {
       sm: "320px",
@@ -15,6 +16,19 @@ module.exports = {
         custom: ["Inter", "sans-serif"],
         Poppins: ["Poppins", "sans-serif"],
       },
+      colors: {
+        dark: {
+          100: "#333",
+          200: "#444",
+          // Add other dark mode color variants here...
+        },
+      },
+    },
+  },
+  variants: {
+    extend: {
+      textColor: ["dark"],
+      backgroundColor: ["dark"],
     },
   },
   plugins: [],
