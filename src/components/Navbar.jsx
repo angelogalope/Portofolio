@@ -26,7 +26,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   };
 
   return (
-    <div className={`sticky top-0 ${darkMode ? "bg-gray-800" : "bg-white"}`}>
+    <div className={`sticky top-0 ${darkMode ? "bg-dark-300 text-white" : "bg-white"}`}>
       <div className="flex items-center justify-between">
         <img
           src="images/Logo.png"
@@ -37,7 +37,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         {/* Mobile Menu */}
         {isMobile && (
           <button
-            className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400"
+            className="text-[14px] font-semibold hover:text-slate-400"
             onClick={toggleMenu}
           >
             <HiMenu size={30} />
@@ -47,17 +47,17 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         {/* Desktop Navigation */}
         {!isMobile && (
           <div className="flex gap-20">
-            <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400">
+            <button className="text-[14px] font-semibold hover:text-slate-400">
               <Link to="about" spy={true} smooth={true} offset={0} duration={500}>
                 About
               </Link>
             </button>
-            <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400">
+            <button className="text-[14px] font-semibold hover:text-slate-400">
               <Link to="stack" spy={true} smooth={true} offset={0} duration={500}>
                 Stack
               </Link>
             </button>
-            <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400">
+            <button className="text-[14px] font-semibold hover:text-slate-400">
               <Link
                 to="project"
                 spy={true}
@@ -68,7 +68,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 Projects
               </Link>
             </button>
-            <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400">
+            <button className="text-[14px] font-semibold hover:text-slate-400">
               <Link
                 to="contact"
                 spy={true}
@@ -91,7 +91,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       {isMobile && isMenuOpen && (
           <div className="absolute top-12 left-0 w-full bg-white shadow-md py-2 rounded-b-lg border">
             <div className="flex flex-col items-center">
-              <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400 mb-2 border-b w-full">
+              <button className="text-[14px] font-semibold hover:text-slate-400 mb-2 border-b w-full">
                 <Link
                   to="about"
                   spy={true}
@@ -103,7 +103,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                   About
                 </Link>
               </button>
-              <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400 mb-2 border-b w-full">
+              <button className="text-[14px] font-semibold hover:text-slate-400 mb-2 border-b w-full">
                 <Link
                   to="stack"
                   spy={true}
@@ -115,7 +115,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                   Stack
                 </Link>
               </button>
-              <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400 mb-2 border-b w-full">
+              <button className="text-[14px] font-semibold hover:text-slate-400 mb-2 border-b w-full">
                 <Link
                   to="project"
                   spy={true}
@@ -127,7 +127,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                   Projects
                 </Link>
               </button>
-              <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400">
+              <button className="text-[14px] font-semibold hover:text-slate-400">
                 <Link
                   to="contact"
                   spy={true}

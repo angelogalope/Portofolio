@@ -37,15 +37,15 @@ const HeroSection = () => {
 
       <div className="flex flex-col sm:w-[395px] md:w-[495px] lg:w-[595px]">
         <div className="text-gray-400 sm:text-[20px] font-medium">Hi! I am</div>
-        <div className=" text-blue-900 sm:text-[20px] font-semibold">
+        <div className="  sm:text-[20px] font-semibold">
           Angelo Galope, pursuing BS in
         </div>
-        <div className="text-zinc-950 text-[30px] sm:text-[48px] font-extrabold text-shadow-md">
+        <div className="text-[30px] sm:text-[48px] font-extrabold text-shadow-md">
           <h1 className="">
             Information <span className="ml-[100px] md:ml-[160px]">Technology</span>
           </h1>
         </div>
-        <div class=" text-zinc-950 text-[12px] sm:text-[18px] py-5">
+        <div class="text-[12px] sm:text-[18px] py-5">
           A newbie tech dweeb determined to dive into the world of
           technology with passion and drive.
         </div>
@@ -74,7 +74,7 @@ function App() {
   };
   
   return (
-    <div id="home" className={`${darkMode ? "bg-gray-800" : "bg-white"}`}>
+    <div id="home" className={`${darkMode ? "bg-dark-300 text-white" : "bg-white"}`}>
       <div className="flex flex-col w-full h-full pt-5 px-[25px] md:px-[150px]">
 
         {/* Navigation Bar */}
@@ -107,7 +107,7 @@ function App() {
 
         {/* Stack Section */}
         <div className="flex flex-col items-center text-center py-[150px]">
-          <div id="stack" className="text-zinc-950 text-[30px] md:text-[44px] font-semibold">
+          <div id="stack" className="text-[30px] md:text-[44px] font-semibold">
             Technology Stacks
           </div>
           <div className="text-center text-[12px] md:text-[16px] font-normal pt-[30px]">
@@ -177,7 +177,7 @@ function App() {
           >
             My Projects
           </div>
-          <div className="text-zinc-950 text-[16px] font-normal text-center">
+          <div className="text-[16px] font-normal text-center">
             {" "}
             I worked on diverse school projects involving a mix of programming
             languages and frameworks. I actively sought to enhance my skills and
