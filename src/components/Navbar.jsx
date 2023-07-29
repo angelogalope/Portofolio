@@ -38,7 +38,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         {isMobile && (
           <button
           className={`text-[14px] font-semibold hover:text-slate-400 ${
-            darkMode ? "text-white bg-dark-100" : "text-black bg-white"
+            darkMode ? "text-white" : "text-black bg-white"
           }`}
             onClick={toggleMenu}
           >
