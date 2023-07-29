@@ -32,10 +32,10 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isMobile && (
           <button
-            className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400 sticky"
+            className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400"
             onClick={toggleMenu}
           >
-            <HiMenu size={20} />
+            <HiMenu size={30} />
           </button>
         )}
 
@@ -91,9 +91,9 @@ const Navbar = () => {
 
         {/* Dropdown Menu */}
         {isMobile && isMenuOpen && (
-          <div className="absolute top-12 left-0 w-full bg-white shadow-md py-2">
+          <div className="absolute top-12 left-0 w-full bg-white shadow-md py-2 rounded-b-lg border">
             <div className="flex flex-col items-center">
-              <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400 mb-2">
+              <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400 mb-2 border-b w-full">
                 <Link
                   to="about"
                   spy={true}
@@ -105,7 +105,7 @@ const Navbar = () => {
                   About
                 </Link>
               </button>
-              <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400 mb-2">
+              <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400 mb-2 border-b w-full">
                 <Link
                   to="stack"
                   spy={true}
@@ -117,7 +117,7 @@ const Navbar = () => {
                   Stack
                 </Link>
               </button>
-              <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400 mb-2">
+              <button className="text-zinc-950 text-[14px] font-semibold hover:text-slate-400 mb-2 border-b w-full">
                 <Link
                   to="project"
                   spy={true}
