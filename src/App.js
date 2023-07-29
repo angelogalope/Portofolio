@@ -1,5 +1,10 @@
 import "./App.css";
 import { Link } from "react-scroll";
+import { BsFacebook, BsYoutube, BsGithub } from "react-icons/bs";
+import { FaTiktok } from "react-icons/fa";
+import { AiFillInstagram, AiFillPhone } from "react-icons/ai";
+import { BiLogoGmail } from "react-icons/bi";
+import Navbar from "./components/Navbar";
 
 const HeroSection = () => {
   return (
@@ -41,39 +46,19 @@ const HeroSection = () => {
         />
         <div className="flex flex-col gap-6">
           <a href="https://www.facebook.com/gzelogal/">
-            <img
-              alt="Angelo2"
-              className="w-[38px] h-[38px] hover:scale-110 duration-300"
-              src="images/Facebook.png"
-            />
+            <BsFacebook className="text-black w-[36px] h-[36px] hover:scale-110 duration-300"/>
           </a>
           <a href="https://www.instagram.com/datboijero/">
-            <img
-              alt="Angelo2"
-              className="w-[38px] h-[38px] hover:scale-110 duration-300"
-              src="images/Instagram.png"
-            />
+            <AiFillInstagram className="w-[36px] h-[36px] hover:scale-110 duration-300"/>
           </a>
           <a href="https://www.tiktok.com/@gzelo_o">
-            <img
-              alt="Angelo2"
-              className="w-[38px] h-[38px] hover:scale-110 duration-300"
-              src="images/TikTok.png"
-            />
+            <FaTiktok className="w-[34px] h-[34px] hover:scale-110 duration-300"/>
           </a>
           <a href="https://www.youtube.com/channel/UCQbPRkGcJmO6wkKQ0wFwp3Q">
-            <img
-              alt="Angelo2"
-              className="w-[38px] h-[38px] hover:scale-110 duration-300"
-              src="images/YouTube.png"
-            />
+            <BsYoutube className="w-[34px] h-[34px] hover:scale-110 duration-300"/>
           </a>
           <a href="https://github.com/angelogalope">
-            <img
-              alt="Angelo2"
-              className="w-[38px] h-[38px] hover:scale-110 duration-300"
-              src="images/GitHub.png"
-            />
+            <BsGithub className="w-[34px] h-[34px] hover:scale-110 duration-300"/>
           </a>
         </div>
       </div>
@@ -85,72 +70,25 @@ function App() {
   return (
     <div id="home">
       <div className="flex flex-col w-full h-full pt-5 px-[150px]">
-        <div className="flex items-center justify-between h-10 top-[15px]  pb-5">
-          <img src="images/Logo.png" alt="logo" className="w-[44px] h-[44px]" />
-          <div className="flex gap-20">
-            <button className="top-[15px] text-zinc-950 text-[14px] font-semibold hover:text-slate-400">
-              <Link
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-                About
-              </Link>
-            </button>
-            <button className="top-[15px] text-zinc-950 text-[14px] font-semibold hover:text-slate-400">
-              <Link
-                to="stack"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-                Stack
-              </Link>
-            </button>
-            <button className="top-[15px] text-zinc-950 text-[14px] font-semibold hover:text-slate-400">
-              <Link
-                to="project"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-                Projects
-              </Link>
-            </button>
-            <button className="top-[15px] text-zinc-950 text-[14px] font-semibold hover:text-slate-400">
-              <Link
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-                Contact
-              </Link>
-            </button>
-          </div>
-        </div>
-        <div className="flex border border-black"></div>
+
+        {/* Navigation Bar */}
+        <Navbar/>
 
         {/* Hero Section */}
         <HeroSection />
 
         {/* About Section */}
-        <div id="about" className="flex flex-row justify-between  py-[150px]">
+        <div id="about" className="flex flex-row justify-between items-center py-[150px]">
           <img
             alt="Angelo2"
             className="w-[303px] h-[303px]"
             src="images/Untitled design (6) 1.png"
           />
-          <div className="w-[564px] relative flex flex-col justify-center items-start space-y-10">
+          <div className="w-[564px] flex flex-col justify-center items-start space-y-10">
             <div className="w-[304px] h-[70px] text-[44px] font-semibold">
               About me
             </div>
-            <div className="w-[564px] h-[172px] text-[16px] font-normal">
+            <div className=" h-[172px] text-[16px] font-normal">
               As a second-year student at Caraga State University, I find myself
               pursuing a Bachelor of Science degree in Information Technology.
               Although it wasn't initially my area of interest, I've been
@@ -176,49 +114,49 @@ function App() {
             <div class="flex justify-center items-center gap-[99px]">
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-300"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500"
                 src="images/Mysql.png"
               />
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-300"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500"
                 src="images/Figma.png"
               />
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-300"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500"
                 src="images/Java.png"
               />
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-300"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500"
                 src="images/React.png"
               />
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-300"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500"
                 src="images/devicon_tailwindcss.png"
               />
             </div>
             <div className="flex justify-center items-center gap-[99px] mt-10">
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-300"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500"
                 src="images/Css3.png"
               />
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-300"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500"
                 src="images/Html5.png"
               />
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-300"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500"
                 src="images/Javascript.png"
               />
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-300"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500"
                 src="images/C.png"
               />
             </div>
@@ -252,22 +190,14 @@ function App() {
       >
         <div className="flex gap-10">
           <div className="self-stretch justify-start items-center gap-2.5 inline-flex">
-            <img
-              alt="Angelo2"
-              className="w-[27px] h-[27px]"
-              src="images/Gmail Logo.png"
-            />
-            <div className="text-white text-[14px] font-semibold">
+          <BiLogoGmail className="w-[27px] h-[27px] text-white"/>
+            <div className="text-white text-[14px]">
               angelo.galope03@gmail.com
             </div>
           </div>
           <div className="top-[2736px]justify-start items-center gap-2.5 inline-flex">
-            <img
-              alt="Angelo2"
-              className="w-[27px] h-[27px]"
-              src="images/Phone.png"
-            />
-            <div className="text-white text-[14px] font-semibold">
+            <AiFillPhone className="w-[27px] h-[27px] text-white"/>
+            <div className="text-white text-[14px]">
               (085) 303 6214
             </div>
           </div>
