@@ -68,7 +68,7 @@ const HeroSection = () => {
 function App() {
   return (
     <div id="home">
-      <div className="flex flex-col w-full h-full pt-5 px-[50px] md:px-[150px]">
+      <div className="flex flex-col w-full h-full pt-5 px-[25px] md:px-[150px]">
 
         {/* Navigation Bar */}
         <Navbar/>
