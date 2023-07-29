@@ -12,24 +12,24 @@ const HeroSection = () => {
       <div className="flex flex-col md:flex-row items-center">
         <img
           alt="Angelo2"
-          className="sm:w-[363px] w-[343px] md:w-[223px] lg:w-[303px]"
+          className=" w-[343px] sm:w-[363px] md:w-[223px] lg:w-[303px]"
           src="images/Untitled design (7) 1.png"
         />
         <div className="flex flex-row items-center md:flex-col gap-6 py-5">
           <a href="https://www.facebook.com/gzelogal/">
-            <BsFacebook className="w-[18px] sm:w-[24px] md:w-[30px] lg:w-[36px] h-[18px] sm:h-[24px] md:h-[30px] lg:h-[36px] hover:scale-110 duration-300"/>
+            <BsFacebook className="w-[36px] h-[36px] hover:scale-110 duration-300"/>
           </a>
           <a href="https://www.instagram.com/datboijero/">
-            <AiFillInstagram className="w-[18px] sm:w-[24px] md:w-[30px] lg:w-[36px] h-[18px] sm:h-[24px] md:h-[30px] lg:h-[36px] hover:scale-110 duration-300"/>
+            <AiFillInstagram className="w-[36px] h-[36px] hover:scale-110 duration-300"/>
           </a>
           <a href="https://www.tiktok.com/@gzelo_o">
-            <FaTiktok className="w-[16px] sm:w-[22px] md:w-[28px] lg:w-[34px] md:h-[28px] lg:h-[34px] hover:scale-110 duration-300"/>
+            <FaTiktok className="w-[34px] h-[34px] hover:scale-110 duration-300"/>
           </a>
           <a href="https://www.youtube.com/channel/UCQbPRkGcJmO6wkKQ0wFwp3Q">
-            <BsYoutube className="w-[16px] sm:w-[22px] md:w-[28px] lg:w-[34px] md:h-[28px] h-[34px] hover:scale-110 duration-300"/>
+            <BsYoutube className="w-[34px] h-[34px] hover:scale-110 duration-300"/>
           </a>
           <a href="https://github.com/angelogalope">
-            <BsGithub className="w-[16px] sm:w-[22px] md:w-[28px] lg:w-[34px] md:h-[28px] h-[34px] hover:scale-110 duration-300"/>
+            <BsGithub className="w-[34px] h-[34px] hover:scale-110 duration-300"/>
           </a>
         </div>
       </div>
@@ -77,17 +77,17 @@ function App() {
         <HeroSection />
 
         {/* About Section */}
-        <div id="about" className="flex flex-row justify-between items-center py-[150px]">
+        <div id="about" className="flex flex-col sm:flex-row  justify-between items-center py-[50px] md:py-[150px]">
           <img
             alt="Angelo2"
             className="w-[303px] h-[303px]"
             src="images/Untitled design (6) 1.png"
           />
-          <div className="w-[564px] flex flex-col justify-center items-start space-y-10">
-            <div className="w-[304px] h-[70px] text-[44px] font-semibold">
+          <div className="flex flex-col sm:justify-center items-center sm:items-start pt-5 md:space-y-10">
+            <div className="h-[70px] text-[30px] md:text-[44px] font-semibold">
               About me
             </div>
-            <div className=" h-[172px] text-[16px] font-normal">
+            <div className="text-[12px] md:text-[16px] font-normal text-center md:text-start">
               As a second-year student at Caraga State University, I find myself
               pursuing a Bachelor of Science degree in Information Technology.
               Although it wasn't initially my area of interest, I've been
