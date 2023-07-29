@@ -99,18 +99,18 @@ function App() {
         </div>
 
         {/* Stack Section */}
-        <div className="flex flex-col items-center py-[150px]">
-          <div id="stack" className="text-zinc-950 text-[44px] font-semibold">
+        <div className="flex flex-col items-center text-center py-[150px]">
+          <div id="stack" className="text-zinc-950 text-[30px] md:text-[44px] font-semibold">
             Technology Stacks
           </div>
-          <div className="text-center text-[16px] font-normal">
+          <div className="text-center text-[12px] md:text-[16px] font-normal pt-[30px]">
             While proficient in some areas, I'm actively learning and
             practicing, like diving deeper into advanced JavaScript concepts, as
             well as mastering React's technicalities and honing my skills into
             Tailwind CSS for efficient and responsive web development.
           </div>
           <div class="justify-center items-center mt-10">
-            <div class="flex justify-center items-center gap-[99px]">
+            <div class="grid grid-cols-2 justify-center items-center gap-[59px] md:gap-[99px]">
               <img
                 alt="Angelo2"
                 className="w-[55px] h-[55px] hover:scale-110 duration-500"
@@ -137,7 +137,7 @@ function App() {
                 src="images/devicon_tailwindcss.png"
               />
             </div>
-            <div className="flex justify-center items-center gap-[99px] mt-10">
+            <div className="grid grid-cols-2 justify-center items-center gap-[59px] md:gap-[99px] mt-10">
               <img
                 alt="Angelo2"
                 className="w-[55px] h-[55px] hover:scale-110 duration-500"
@@ -185,18 +185,18 @@ function App() {
       {/* Footer */}
       <div
         id="contact"
-        className="flex justify-between px-[150px] space-x-10 w-full h-[70px] top-[2706px] bg-black"
+        className="flex justify-between px-[25px] md:px-[150px] space-x-10 w-full h-[70px] top-[2706px] bg-black"
       >
-        <div className="flex gap-10">
+        <div className="flex flex-col justify-center md:flex-row gap-2 md:gap-10">
           <div className="self-stretch justify-start items-center gap-2.5 inline-flex">
-          <BiLogoGmail className="w-[27px] h-[27px] text-white"/>
-            <div className="text-white text-[14px]">
+          <BiLogoGmail className="md:w-[27px] md:h-[27px] text-white"/>
+            <div className="text-white text-[10px] md:text-[14px]">
               angelo.galope03@gmail.com
             </div>
           </div>
           <div className="top-[2736px]justify-start items-center gap-2.5 inline-flex">
-            <AiFillPhone className="w-[27px] h-[27px] text-white"/>
-            <div className="text-white text-[14px]">
+            <AiFillPhone className="md:w-[27px] md:h-[27px] text-white"/>
+            <div className="text-white text-[10px] md:text-[14px]">
               (085) 303 6214
             </div>
           </div>
@@ -205,7 +205,7 @@ function App() {
             <Link to="home" spy={true} smooth={true} offset={0} duration={500}>
               <img
                 alt="Angelo2"
-                className="w-[27px] h-[27px] left-[1708px] top-[2736px]"
+                className="w-[17px] md:w-[27px] h-[17px] md:h-[27px] left-[1708px] top-[2736px]"
                 src="images/3 1.png"
               />
             </Link>
