@@ -35,18 +35,17 @@ const HeroSection = () => {
       </div>
 
       <div className="flex flex-col sm:w-[395px] md:w-[495px] lg:w-[595px]">
-        <div className="text-gray-400 md:text-[20px] font-medium">Hi! I am</div>
-        <div className=" text-blue-900 text-[20px] font-semibold">
+        <div className="text-gray-400 sm:text-[20px] font-medium">Hi! I am</div>
+        <div className=" text-blue-900 sm:text-[20px] font-semibold">
           Angelo Galope, pursuing BS in
         </div>
-        <div className="text-zinc-950 text-[44px] sm:text-[46px] md:text-[48px] font-extrabold text-shadow-md">
+        <div className="text-zinc-950 text-[30px] sm:text-[48px] font-extrabold text-shadow-md">
           <h1 className="">
-            Information &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Technology
+            Information <span className="ml-[100px] md:ml-[160px]">Technology</span>
           </h1>
         </div>
-        <div class=" text-zinc-950 text-[14px] font-norma py-5">
+        <div class=" text-zinc-950 text-[12px] sm:text-[18px] py-5">
           A newbie tech dweeb determined to dive into the world of
-          <br />
           technology with passion and drive.
         </div>
         <button>
