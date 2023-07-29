@@ -3,6 +3,9 @@
 @tailwind utilities;
 @layer utilities {
     .text-shadow-md {
-      text-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+      text-shadow: 8px 8px 10px rgba(0, 0, 0, 0.486);
+    }
+    .text-shadow-whitemd {
+      text-shadow: 8px 8px 10px rgba(243, 243, 243, 0.3);
     }
   }

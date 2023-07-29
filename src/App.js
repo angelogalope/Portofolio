@@ -7,9 +7,10 @@ import { AiFillInstagram, AiFillPhone } from "react-icons/ai";
 import { BiLogoGmail } from "react-icons/bi";
 import Navbar from "./components/Navbar";
 
-const HeroSection = () => {
+const HeroSection = ({ darkMode }) => {
+
   return (
-    <div className="flex flex-col md:flex-row-reverse py-[30px] sm:py-[60px] md:py-[90px]  justify-between">
+    <div className={`flex flex-col md:flex-row-reverse py-[30px] sm:py-[60px] md:py-[90px]  justify-between ${darkMode ? "bg-dark-300 transition-all duration-500" : "bg-white transition-all duration-500"}`}>
       <div className="flex flex-col md:flex-row items-center">
         <img
           alt="Angelo2"
@@ -40,7 +41,7 @@ const HeroSection = () => {
         <div className="  sm:text-[20px] font-semibold">
           Angelo Galope, pursuing BS in
         </div>
-        <div className="text-[30px] sm:text-[48px] font-extrabold text-shadow-md">
+        <div className={`text-[30px] sm:text-[48px] font-extrabold ${darkMode ? "text-white text-shadow-whitemd" : "text-shadow-md"}`}>
           <h1 className="">
             Information <span className="ml-[100px] md:ml-[160px]">Technology</span>
           </h1>
@@ -74,14 +75,14 @@ function App() {
   };
   
   return (
-    <div id="home" className={`${darkMode ? "bg-dark-300 text-white" : "bg-white"}`}>
+    <div id="home" className={`${darkMode ? "bg-dark-300 text-white transition-all duration-500" : "bg-white transition-all duration-500"}`}>
       <div className="flex flex-col w-full h-full pt-5 px-[25px] md:px-[150px]">
 
         {/* Navigation Bar */}
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
         {/* Hero Section */}
-        <HeroSection />
+        <HeroSection darkMode={darkMode} />
 
         {/* About Section */}
         <div id="about" className="flex flex-col sm:flex-row  justify-between items-center py-[50px] md:py-[150px]">

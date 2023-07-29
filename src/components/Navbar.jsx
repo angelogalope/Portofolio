@@ -26,10 +26,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   };
 
   return (
-    <div className={`sticky top-0 ${darkMode ? "bg-dark-300 text-white" : "bg-white"}`}>
+    <div className={`sticky top-0 ${darkMode ? "bg-dark-300 text-white transition-all duration-500" : "bg-white transition-all duration-500"}`}>
       <div className="flex items-center justify-between">
         <img
-          src="images/Logo.png"
+          src={darkMode ? "images/3 1.png" : "images/Logo.png"}
           alt="logo"
           className="w-[34px] h-[34px] p-1"
         />
