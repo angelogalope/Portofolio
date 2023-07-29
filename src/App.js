@@ -8,9 +8,34 @@ import Navbar from "./components/Navbar";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-row py-[90px]  justify-between">
-      <div className="flex flex-col w-[595px]">
-        <div className="text-gray-400 text-[20px] font-medium">Hi! I am</div>
+    <div className="flex flex-col md:flex-row-reverse sm:py-[30px] md:py-[90px]  justify-between">
+      <div className="flex flex-col md:flex-row items-center">
+        <img
+          alt="Angelo2"
+          className="sm:w-[363px] w-[343px] md:w-[223px] lg:w-[303px]"
+          src="images/Untitled design (7) 1.png"
+        />
+        <div className="flex flex-row items-center md:flex-col gap-6 py-5">
+          <a href="https://www.facebook.com/gzelogal/">
+            <BsFacebook className="w-[18px] sm:w-[24px] md:w-[30px] lg:w-[36px] h-[18px] sm:h-[24px] md:h-[30px] lg:h-[36px] hover:scale-110 duration-300"/>
+          </a>
+          <a href="https://www.instagram.com/datboijero/">
+            <AiFillInstagram className="w-[18px] sm:w-[24px] md:w-[30px] lg:w-[36px] h-[18px] sm:h-[24px] md:h-[30px] lg:h-[36px] hover:scale-110 duration-300"/>
+          </a>
+          <a href="https://www.tiktok.com/@gzelo_o">
+            <FaTiktok className="w-[16px] sm:w-[22px] md:w-[28px] lg:w-[34px] md:h-[28px] lg:h-[34px] hover:scale-110 duration-300"/>
+          </a>
+          <a href="https://www.youtube.com/channel/UCQbPRkGcJmO6wkKQ0wFwp3Q">
+            <BsYoutube className="w-[16px] sm:w-[22px] md:w-[28px] lg:w-[34px] md:h-[28px] h-[34px] hover:scale-110 duration-300"/>
+          </a>
+          <a href="https://github.com/angelogalope">
+            <BsGithub className="w-[16px] sm:w-[22px] md:w-[28px] lg:w-[34px] md:h-[28px] h-[34px] hover:scale-110 duration-300"/>
+          </a>
+        </div>
+      </div>
+
+      <div className="flex flex-col sm:w-[395px] md:w-[495px] lg:w-[595px]">
+        <div className="text-gray-400 md:text-[20px] font-medium">Hi! I am</div>
         <div className=" text-blue-900 text-[20px] font-semibold">
           Angelo Galope, pursuing BS in
         </div>
@@ -37,31 +62,6 @@ const HeroSection = () => {
           </Link>
         </button>
       </div>
-
-      <div className="flex">
-        <img
-          alt="Angelo2"
-          className="w-[303px] h-[303px]"
-          src="images/Untitled design (7) 1.png"
-        />
-        <div className="flex flex-col gap-6">
-          <a href="https://www.facebook.com/gzelogal/">
-            <BsFacebook className="text-black w-[36px] h-[36px] hover:scale-110 duration-300"/>
-          </a>
-          <a href="https://www.instagram.com/datboijero/">
-            <AiFillInstagram className="w-[36px] h-[36px] hover:scale-110 duration-300"/>
-          </a>
-          <a href="https://www.tiktok.com/@gzelo_o">
-            <FaTiktok className="w-[34px] h-[34px] hover:scale-110 duration-300"/>
-          </a>
-          <a href="https://www.youtube.com/channel/UCQbPRkGcJmO6wkKQ0wFwp3Q">
-            <BsYoutube className="w-[34px] h-[34px] hover:scale-110 duration-300"/>
-          </a>
-          <a href="https://github.com/angelogalope">
-            <BsGithub className="w-[34px] h-[34px] hover:scale-110 duration-300"/>
-          </a>
-        </div>
-      </div>
     </div>
   );
 };
@@ -69,7 +69,7 @@ const HeroSection = () => {
 function App() {
   return (
     <div id="home">
-      <div className="flex flex-col w-full h-full pt-5 px-[150px]">
+      <div className="flex flex-col w-full h-full pt-5 px-[50px] md:px-[150px]">
 
         {/* Navigation Bar */}
         <Navbar/>
