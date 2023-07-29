@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { useState } from "react";
 import "./App.css";
 import { Link } from "react-scroll";
@@ -76,6 +77,7 @@ function App() {
   
   return (
     <div id="home" className={`${darkMode ? "bg-dark-300 text-white transition-all duration-500" : "bg-white transition-all duration-500"}`}>
+      <Analytics />
       <div className="flex flex-col w-full h-full pt-5 px-[25px] md:px-[150px]">
 
         {/* Navigation Bar */}
