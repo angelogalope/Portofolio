@@ -41,14 +41,12 @@ function App () {
     <div>
       <div id="home" className="w-[1903px] h-[2706px] bg-white">
       {/* Navigation Bar */}
-      <Navbar />
+      <Navbar/>
 
       {/* Hero Page */}
       <HeroSection/>
       <AboutButton/>
-      
-        
-      
+
       <div className="left-[1001px] top-[234px] absolute justify-start items-center inline-flex">
         <img
           alt="Angelo2"
@@ -188,7 +186,7 @@ function App () {
           />
         </Link>
       </button>
-      
+
       <div className="left-[155px] top-[2736px] absolute justify-end items-center inline-flex">
         <div className="self-stretch justify-start items-center gap-2.5 inline-flex">
           <img
