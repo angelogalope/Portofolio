@@ -1,7 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-* {
-  scroll-behavior: smooth;
-}
+@layer utilities {
+    .text-shadow-md {
+      text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+    }
+  }
