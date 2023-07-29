@@ -173,7 +173,7 @@ function App() {
         <div className="flex flex-col items-center py-[150px] space-y-10">
           <div
             id="project"
-            className="wtext-zinc-950 text-[44px] font-semibold"
+            className="wtext-zinc-950 text-[30px] md:text-[44px] font-semibold"
           >
             My Projects
           </div>
