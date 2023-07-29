@@ -210,7 +210,7 @@ function App() {
           </div>
         </div>
         <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-2 md:gap-5">
-          <p className="text-[6px] md:text-[12px]">© 2023 Angelo Galope. All rights reserved.</p>
+          <p className="text-white text-[6px] md:text-[12px]">© 2023 Angelo Galope. All rights reserved.</p>
           <button className="flex items-center">
             <Link to="home" spy={true} smooth={true} offset={0} duration={500}>
               <img
