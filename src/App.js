@@ -110,7 +110,7 @@ function App() {
             Tailwind CSS for efficient and responsive web development.
           </div>
           <div class="justify-center items-center mt-10">
-            <div class="grid grid-cols-2 justify-center items-center gap-[59px] md:gap-[99px]">
+            <div class="grid grid-cols-2 md:grid-cols-5 justify-center items-center gap-[59px] md:gap-[99px]">
               <img
                 alt="Angelo2"
                 className="w-[55px] h-[55px] hover:scale-110 duration-500"
@@ -137,7 +137,7 @@ function App() {
                 src="images/devicon_tailwindcss.png"
               />
             </div>
-            <div className="grid grid-cols-2 justify-center items-center gap-[59px] md:gap-[99px] mt-10">
+            <div className="grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-[59px] md:gap-[99px] mt-10">
               <img
                 alt="Angelo2"
                 className="w-[55px] h-[55px] hover:scale-110 duration-500"
