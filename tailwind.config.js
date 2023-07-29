@@ -20,7 +20,7 @@ module.exports = {
         dark: {
           100: "#333",
           200: "#444",
-          300: "#373737",
+          300: "#000000",
           // Add other dark mode color variants here...
         },
       },

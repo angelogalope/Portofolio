@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Link } from "react-scroll";
-import { BsFacebook, BsYoutube, BsGithub } from "react-icons/bs";
+import { BsFacebook, BsYoutube, BsGithub, BsFillPersonFill } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
 import { AiFillInstagram, AiFillPhone } from "react-icons/ai";
 import { BiLogoGmail } from "react-icons/bi";
@@ -56,10 +56,10 @@ const HeroSection = ({ darkMode }) => {
             smooth={true}
             offset={0}
             duration={500}
-            class="w-[129px] h-[39px] flex items-center justify-center bg-black rounded-lg space-x-2 hover:scale-110 duration-300"
+            class={`w-[129px] h-[39px] flex items-center justify-center  rounded-lg space-x-2 hover:scale-110 duration-300 ${darkMode ? "bg-white text-black" : "bg-black text-white"}`}
           >
-            <img alt="MeIcon" class="w-4 h-4" src="images/Me(icon).png" />
-            <div class="text-white text-[14px] font-normal">About Me</div>
+            <BsFillPersonFill size={20}/>
+            <div class="text-[14px] font-normal">About Me</div>
           </Link>
         </button>
       </div>
