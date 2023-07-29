@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col md:flex-row-reverse sm:py-[30px] md:py-[90px]  justify-between">
+    <div className="flex flex-col md:flex-row-reverse py-[30px] sm:py-[60px] md:py-[90px]  justify-between">
       <div className="flex flex-col md:flex-row items-center">
         <img
           alt="Angelo2"
@@ -39,7 +39,7 @@ const HeroSection = () => {
         <div className=" text-blue-900 text-[20px] font-semibold">
           Angelo Galope, pursuing BS in
         </div>
-        <div className="text-zinc-950 text-[48px] font-extrabold text-shadow-md">
+        <div className="text-zinc-950 text-[44px] sm:text-[46px] md:text-[48px] font-extrabold text-shadow-md">
           <h1 className="">
             Information &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Technology
           </h1>
