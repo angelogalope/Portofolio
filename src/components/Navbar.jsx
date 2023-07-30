@@ -34,8 +34,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           className="w-[34px] h-[34px] p-1"
         />
 
-        
-
         {/* Mobile Menu */}
         {isMobile && (
           <button

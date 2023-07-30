@@ -15,14 +15,14 @@ const HeroSection = ({ darkMode }) => {
       <div className="flex flex-col md:flex-row items-center">
       <img
           alt="Angelo2"
-          className={`w-[343px] sm:w-[363px] md:w-[223px] lg:w-[303px] transition-opacity duration-700 ${
+          className={`w-[243px] h-[243px] sm:w-[343px] sm:h-[343px] transition-opacity duration-700 ${
             darkMode ? "opacity-0 absolute" : "opacity-100"
           }`}
           src="images/Untitled design (7) 1.png"
         />
         <img
           alt="Angelo2"
-          className={`w-[343px] sm:w-[363px] md:w-[223px] lg:w-[303px] transition-opacity duration-700 ${
+          className={`w-[243px] h-[243px] sm:w-[343px] sm:h-[343px] transition-opacity duration-700 ${
             darkMode ? "opacity-100" : "opacity-0 absolute"
           }`}
           src="images/white-circle 1.png"
@@ -48,7 +48,7 @@ const HeroSection = ({ darkMode }) => {
 
       <div className="flex flex-col sm:w-[395px] md:w-[495px] lg:w-[595px]">
         <div className="text-gray-400 sm:text-[20px] font-medium">Hi! I am</div>
-        <div className="  sm:text-[20px] font-semibold">
+        <div className="sm:text-[20px] font-semibold">
           Angelo Galope, pursuing BS in
         </div>
         <div className={`text-[30px] sm:text-[48px] font-extrabold ${darkMode ? "text-white text-shadow-whitemd" : "text-shadow-md"}`}>
@@ -99,14 +99,14 @@ function App() {
         <div id="about" className="flex flex-col sm:flex-row  justify-between items-center py-[50px] md:py-[150px]">
           <img
           alt="Angelo2"
-          className={`w-[343px] sm:w-[363px] md:w-[223px] lg:w-[303px] transition-opacity duration-700 ${
+          className={`w-[243px] h-[243px] sm:w-[343px] sm:h-[343px] transition-opacity duration-700 ${
             darkMode ? "opacity-0 absolute" : "opacity-100"
           }`}
           src="images/Untitled design (6) 1.png"
         />
         <img
           alt="Angelo2"
-          className={`w-[343px] sm:w-[363px] md:w-[223px] lg:w-[303px] transition-opacity duration-700 ${
+          className={`w-[243px] h-[243px] sm:w-[343px] sm:h-[343px] transition-opacity duration-700 ${
             darkMode ? "opacity-100" : "opacity-0 absolute"
           }`}
           src="images/gray-circle.png"
