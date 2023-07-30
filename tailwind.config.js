@@ -24,6 +24,13 @@ module.exports = {
           // Add other dark mode color variants here...
         },
       },
+      opacity: {
+        '0': '0',
+        '100': '1',
+      },
+      transitionProperty: {
+        'opacity': 'opacity',
+      },
     },
   },
   variants: {

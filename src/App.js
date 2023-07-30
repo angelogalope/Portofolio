@@ -13,10 +13,19 @@ const HeroSection = ({ darkMode }) => {
   return (
     <div className={`flex flex-col md:flex-row-reverse py-[30px] sm:py-[60px] md:py-[90px]  justify-between ${darkMode ? "bg-dark-300 transition-all duration-500" : "bg-white transition-all duration-500"}`}>
       <div className="flex flex-col md:flex-row items-center">
+      <img
+          alt="Angelo2"
+          className={`w-[343px] sm:w-[363px] md:w-[223px] lg:w-[303px] transition-opacity duration-700 ${
+            darkMode ? "opacity-0 absolute" : "opacity-100"
+          }`}
+          src="images/Untitled design (7) 1.png"
+        />
         <img
           alt="Angelo2"
-          className=" w-[343px] sm:w-[363px] md:w-[223px] lg:w-[303px]"
-          src="images/Untitled design (7) 1.png"
+          className={`w-[343px] sm:w-[363px] md:w-[223px] lg:w-[303px] transition-opacity duration-700 ${
+            darkMode ? "opacity-100" : "opacity-0 absolute"
+          }`}
+          src="images/white-circle 1.png"
         />
         <div className="flex flex-row items-center md:flex-col gap-6 py-5">
           <a href="https://www.facebook.com/gzelogal/">
@@ -78,7 +87,7 @@ function App() {
   return (
     <div id="home" className={`${darkMode ? "bg-dark-300 text-white transition-all duration-500" : "bg-white transition-all duration-500"}`}>
       <Analytics />
-      <div className="flex flex-col w-full h-full pt-5 px-[25px] md:px-[150px]">
+      <div className="flex flex-col w-full h-full pt-5 px-[25px] md:px-[150px]"> 
 
         {/* Navigation Bar */}
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
@@ -89,10 +98,19 @@ function App() {
         {/* About Section */}
         <div id="about" className="flex flex-col sm:flex-row  justify-between items-center py-[50px] md:py-[150px]">
           <img
-            alt="Angelo2"
-            className="w-[303px] h-[303px]"
-            src="images/Untitled design (6) 1.png"
-          />
+          alt="Angelo2"
+          className={`w-[343px] sm:w-[363px] md:w-[223px] lg:w-[303px] transition-opacity duration-700 ${
+            darkMode ? "opacity-0 absolute" : "opacity-100"
+          }`}
+          src="images/Untitled design (6) 1.png"
+        />
+        <img
+          alt="Angelo2"
+          className={`w-[343px] sm:w-[363px] md:w-[223px] lg:w-[303px] transition-opacity duration-700 ${
+            darkMode ? "opacity-100" : "opacity-0 absolute"
+          }`}
+          src="images/gray-circle.png"
+        />
           <div className="flex flex-col sm:justify-center items-center sm:items-start pt-5 md:space-y-10">
             <div className="h-[70px] text-[30px] md:text-[44px] font-semibold">
               About me
