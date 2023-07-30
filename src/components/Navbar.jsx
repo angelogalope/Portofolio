@@ -91,12 +91,11 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       </div>
 
       {isMobile && isMenuOpen && (
-          <div className="absolute left-0 w-full bg-inherit shadow-md rounded-b-lg border">
+          <div className="sticky top-5 left-0 w-full bg-inherit shadow-md rounded-b-lg border">
             <div className="flex flex-col items-center">
               <button className="text-[14px] hover:text-slate-400 py-2 border-b w-full">
                 <Link
                   to="about"
-                  spy={true}
                   smooth={true}
                   offset={0}
                   duration={500}
