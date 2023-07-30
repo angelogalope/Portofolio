@@ -91,9 +91,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       </div>
 
       {isMobile && isMenuOpen && (
-          <div className="absolute top-12 left-0 w-full bg-inherit shadow-md py-2 rounded-b-lg border">
+          <div className="absolute left-0 w-full bg-inherit shadow-md rounded-b-lg border">
             <div className="flex flex-col items-center">
-              <button className="text-[14px] hover:text-slate-400 mb-2 border-b w-full">
+              <button className="text-[14px] hover:text-slate-400 py-2 border-b w-full">
                 <Link
                   to="about"
                   spy={true}
@@ -105,7 +105,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                   About
                 </Link>
               </button>
-              <button className="text-[14px] hover:text-slate-400 mb-2 border-b w-full">
+              <button className="text-[14px] hover:text-slate-400 py-2 border-b w-full">
                 <Link
                   to="stack"
                   spy={true}
@@ -117,7 +117,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                   Stack
                 </Link>
               </button>
-              <button className="text-[14px] hover:text-slate-400 mb-2 border-b w-full">
+              <button className="text-[14px] hover:text-slate-400 py-2 border-b w-full">
                 <Link
                   to="project"
                   spy={true}
@@ -129,7 +129,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                   Projects
                 </Link>
               </button>
-              <button className="text-[14px] hover:text-slate-400">
+              <button className="text-[14px] hover:text-slate-400 py-2">
                 <Link
                   to="contact"
                   spy={true}

@@ -11,7 +11,7 @@ import Navbar from "./components/Navbar";
 const HeroSection = ({ darkMode }) => {
 
   return (
-    <div className={`flex flex-col md:flex-row-reverse py-[30px] sm:py-[60px] md:py-[90px]  justify-between ${darkMode ? "bg-dark-300 transition-all duration-500" : "bg-white transition-all duration-500"}`}>
+    <div className={`flex flex-col md:flex-row-reverse py-[30px] sm:py-[60px] md:py-[90px] justify-between ${darkMode ? "bg-dark-300 transition-all duration-500" : "bg-white transition-all duration-500"}`}>
       <div className="flex flex-col md:flex-row items-center">
       <img
           alt="Angelo2"
