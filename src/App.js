@@ -15,14 +15,14 @@ const HeroSection = ({ darkMode }) => {
       <div className="flex flex-col md:flex-row items-center">
       <img
           alt="Angelo2"
-          className={`w-[243px] h-[243px] sm:w-[343px] sm:h-[343px] transition-opacity duration-700 ${
+          className={`w-[243px] h-[243px] md:w-[343px] md:h-[343px] transition-opacity duration-700 ${
             darkMode ? "opacity-0 absolute" : "opacity-100"
           }`}
           src="images/Untitled design (7) 1.png"
         />
         <img
           alt="Angelo2"
-          className={`w-[243px] h-[243px] sm:w-[343px] sm:h-[343px] transition-opacity duration-700 ${
+          className={`w-[243px] h-[243px] md:w-[343px] md:h-[343px] transition-opacity duration-700 ${
             darkMode ? "opacity-100" : "opacity-0 absolute"
           }`}
           src="images/white-circle 1.png"
@@ -96,22 +96,22 @@ function App() {
         <HeroSection darkMode={darkMode} />
 
         {/* About Section */}
-        <div id="about" className="flex flex-col sm:flex-row justify-between items-center py-[50px] md:py-[150px]">
+        <div id="about" className="flex flex-col md:flex-row justify-between items-center py-[50px] md:py-[150px]">
           <img
           alt="Angelo2"
-          className={`w-[243px] h-[243px] sm:w-[343px] sm:h-[343px] transition-opacity duration-700 ${
+          className={`w-[243px] h-[243px] md:w-[343px] md:h-[343px] transition-opacity duration-700 ${
             darkMode ? "opacity-0 absolute" : "opacity-100"
           }`}
           src="images/Untitled design (6) 1.png"
         />
         <img
           alt="Angelo2"
-          className={`w-[243px] h-[243px] sm:w-[343px] sm:h-[343px] transition-opacity duration-700 ${
+          className={`w-[243px] h-[243px] md:w-[343px] md:h-[343px] transition-opacity duration-700 ${
             darkMode ? "opacity-100" : "opacity-0 absolute"
           }`}
           src="images/gray-circle.png"
         />
-          <div className="flex flex-col sm:justify-center items-center sm:items-start pt-5 md:space-y-10">
+          <div className="flex flex-col sm:justify-center items-center md:items-start pt-5 md:space-y-10">
             <div className="h-[70px] text-[30px] md:text-[44px] font-semibold">
               About me
             </div>
