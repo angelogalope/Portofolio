@@ -6,7 +6,7 @@ const Loading = () => {
       <img
         src="images/angelo.png"
         alt="Logo"
-        className="w-[243px] h-[243px] sm:w-[300px] sm:h-[300px] md:w-[343px] md:h-[343px] centered-image animate-fade-in opacity-0 animate-delay"
+        className="w-[200px] h-[200px] sm:w-[243px] sm:h-[243px] md:w-[343px] md:h-[343px] centered-image animate-fade-in opacity-0 animate-delay"
       />
     </div>
   );
