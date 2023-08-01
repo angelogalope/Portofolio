@@ -1,5 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import { Link } from "react-scroll";
 import {
@@ -9,9 +9,10 @@ import {
   BsFillPersonFill,
 } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
-import { AiFillInstagram, AiFillPhone } from "react-icons/ai";
-import { BiLogoGmail } from "react-icons/bi";
+import { AiFillInstagram } from "react-icons/ai";
 import Navbar from "./components/Navbar";
+import Loading from "./components/Loading";
+import Footer from "./components/Footer";
 
 const HeroSection = ({ darkMode }) => {
   return (
@@ -96,10 +97,19 @@ const HeroSection = ({ darkMode }) => {
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode);
   };
+
+  useEffect(() => {
+    // Simulating loading delay with setTimeout (replace with actual data fetching)
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Set a reasonable duration for your data fetching
+  }, []);
+
 
   return (
     <div
@@ -111,168 +121,142 @@ function App() {
       }`}
     >
       <Analytics />
-      <div className="flex flex-col w-full h-full pt-5 px-[25px] md:px-[150px]">
-        {/* Navigation Bar */}
-        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      {loading ? (
+        <Loading />
+      ) : (
+        <div className="flex flex-col w-full h-full pt-5 px-[25px] md:px-[150px]">
+          {/* Navigation Bar */}
+          <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
-        {/* Hero Section */}
-        <HeroSection darkMode={darkMode} />
+          {/* Hero Section */}
+          <HeroSection darkMode={darkMode} />
 
-        {/* About Section */}
-        <div
-          id="about"
-          className="flex flex-col md:flex-row justify-between items-center py-[50px] md:py-[150px]"
-        >
-          <img
-            alt="Angelo2"
-            className={`w-[243px] h-[243px] md:w-[343px] md:h-[343px] transition-opacity duration-700 ${
-              darkMode ? "opacity-0 absolute" : "opacity-100"
-            }`}
-            src="images/Untitled design (6) 1.png"
-          />
-          <img
-            alt="Angelo2"
-            className={`w-[243px] h-[243px] md:w-[343px] md:h-[343px] transition-opacity duration-700 ${
-              darkMode ? "opacity-100" : "opacity-0 absolute"
-            }`}
-            src="images/gray-circle.png"
-          />
-          <div className="flex flex-col sm:justify-center items-center md:items-start pt-5 md:space-y-10">
-            <div className="h-[70px] text-[30px] md:text-[44px] font-semibold">
-              About me
-            </div>
-            <div className="text-[16px] font-normal text-center md:text-start">
-              As a third year student at Caraga State University, I find myself
-              pursuing a Bachelor of Science degree in Information Technology.
-              Although it wasn't initially my area of interest, I've been
-              influenced by the people around me who are enthusiastic about
-              technology. Their passion and excitement for the field inspired me
-              to explore Information Technology further.
-            </div>
-          </div>
-        </div>
-
-        {/* Stack Section */}
-        <div className="flex flex-col items-center text-center py-[150px]">
-          <div id="stack" className="text-[30px] md:text-[44px] font-semibold">
-            Technology Stacks
-          </div>
-          <div className="text-center text-[16px] font-normal pt-[30px]">
-            While proficient in some areas, I'm actively learning and
-            practicing, like diving deeper into advanced JavaScript concepts, as
-            well as mastering React's technicalities and honing my skills into
-            Tailwind CSS for efficient and responsive web development.
-          </div>
-          <div class="justify-center items-center mt-10">
-            <div class="grid grid-cols-2 md:grid-cols-5 justify-center items-center gap-[59px] md:gap-[79px]">
-              <img
-                alt="MySQL"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
-                src="images/Mysql.png"
-              />
-              <img
-                alt="Figma"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
-                src="images/Figma.png"
-              />
-              <img
-                alt="Java"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
-                src="images/Java.png"
-              />
-              <img
-                alt="React"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
-                src="images/React.png"
-              />
-              <img
-                alt="Tailwindcss"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
-                src="images/devicon_tailwindcss.png"
-              />
-              <img
-                alt="CSS3"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
-                src="images/Css3.png"
-              />
-              <img
-                alt="Html5"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
-                src="images/Html5.png"
-              />
-              <img
-                alt="JavaScript"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
-                src="images/Javascript.png"
-              />
-              <img
-                alt="C"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
-                src="images/C.png"
-              />
-              <img
-                alt="Photoshop"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
-                src="images/Photoshop.png"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Projects Section */}
-        <div className="flex flex-col items-center py-[150px] space-y-10">
+          {/* About Section */}
           <div
-            id="project"
-            className="wtext-zinc-950 text-[30px] md:text-[44px] font-semibold"
+            id="about"
+            className="flex flex-col md:flex-row justify-between items-center py-[50px] md:py-[150px]"
           >
-            My Projects
+            <img
+              alt="Angelo2"
+              className={`w-[243px] h-[243px] md:w-[343px] md:h-[343px] transition-opacity duration-700 ${
+                darkMode ? "opacity-0 absolute" : "opacity-100"
+              }`}
+              src="images/Untitled design (6) 1.png"
+            />
+            <img
+              alt="Angelo2"
+              className={`w-[243px] h-[243px] md:w-[343px] md:h-[343px] transition-opacity duration-700 ${
+                darkMode ? "opacity-100" : "opacity-0 absolute"
+              }`}
+              src="images/gray-circle.png"
+            />
+            <div className="flex flex-col sm:justify-center items-center md:items-start pt-5 md:space-y-10">
+              <div className="h-[70px] text-[30px] md:text-[44px] font-semibold">
+                About me
+              </div>
+              <div className="text-[16px] font-normal text-center md:text-start">
+                As a third year student at Caraga State University, I find
+                myself pursuing a Bachelor of Science degree in Information
+                Technology. Although it wasn't initially my area of interest,
+                I've been influenced by the people around me who are
+                enthusiastic about technology. Their passion and excitement for
+                the field inspired me to explore Information Technology further.
+              </div>
+            </div>
           </div>
-          <div className="text-[16px] font-normal text-center">
-            {" "}
-            I worked on diverse school projects involving a mix of programming
-            languages and frameworks. I actively sought to enhance my skills and
-            knowledge, making each project a valuable learning experience.
-          </div>
-          <div className="flex justify-center border rounded-lg w-full h-[250px] text-gray-500 py-10">
-            ---Personal Projects Here---
-          </div>
-        </div>
-      </div>
 
+          {/* Stack Section */}
+          <div className="flex flex-col items-center text-center py-[150px]">
+            <div
+              id="stack"
+              className="text-[30px] md:text-[44px] font-semibold"
+            >
+              Technology Stacks
+            </div>
+            <div className="text-center text-[16px] font-normal pt-[30px]">
+              While proficient in some areas, I'm actively learning and
+              practicing, like diving deeper into advanced JavaScript concepts,
+              as well as mastering React's technicalities and honing my skills
+              into Tailwind CSS for efficient and responsive web development.
+            </div>
+            <div class="justify-center items-center mt-10">
+              <div class="grid grid-cols-2 md:grid-cols-5 justify-center items-center gap-[59px] md:gap-[79px]">
+                <img
+                  alt="MySQL"
+                  className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
+                  src="images/Mysql.png"
+                />
+                <img
+                  alt="Figma"
+                  className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
+                  src="images/Figma.png"
+                />
+                <img
+                  alt="Java"
+                  className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
+                  src="images/Java.png"
+                />
+                <img
+                  alt="React"
+                  className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
+                  src="images/React.png"
+                />
+                <img
+                  alt="Tailwindcss"
+                  className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
+                  src="images/devicon_tailwindcss.png"
+                />
+                <img
+                  alt="CSS3"
+                  className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
+                  src="images/Css3.png"
+                />
+                <img
+                  alt="Html5"
+                  className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
+                  src="images/Html5.png"
+                />
+                <img
+                  alt="JavaScript"
+                  className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
+                  src="images/Javascript.png"
+                />
+                <img
+                  alt="C"
+                  className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
+                  src="images/C.png"
+                />
+                <img
+                  alt="Photoshop"
+                  className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
+                  src="images/Photoshop.png"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Projects Section */}
+          <div className="flex flex-col items-center py-[150px] space-y-10">
+            <div
+              id="project"
+              className="wtext-zinc-950 text-[30px] md:text-[44px] font-semibold"
+            >
+              My Projects
+            </div>
+            <div className="text-[16px] font-normal text-center">
+              {" "}
+              I worked on diverse school projects involving a mix of programming
+              languages and frameworks. I actively sought to enhance my skills
+              and knowledge, making each project a valuable learning experience.
+            </div>
+            <div className="flex justify-center border rounded-lg w-full h-[250px] text-gray-500 py-10">
+              ---Personal Projects Here---
+            </div>
+          </div>
+        </div>
+      )}
       {/* Footer */}
-      <div
-        id="contact"
-        className="flex justify-between px-[25px] md:px-[150px] space-x-10 w-full h-[70px] top-[2706px] bg-black"
-      >
-        <div className="flex flex-col justify-center md:flex-row gap-2 md:gap-10">
-          <div className="self-stretch justify-start items-center gap-2.5 inline-flex">
-            <BiLogoGmail className="md:w-[27px] md:h-[27px] text-white" />
-            <div className="text-white text-[10px] md:text-[14px]">
-              angelo.galope03@gmail.com
-            </div>
-          </div>
-          <div className="top-[2736px]justify-start items-center gap-2.5 inline-flex">
-            <AiFillPhone className="md:w-[27px] md:h-[27px] text-white" />
-            <div className="text-white text-[10px] md:text-[14px]">
-              (085) 303 6214
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-2 md:gap-5">
-          <p className="text-white text-[6px] md:text-[12px]">
-            © 2023 Angelo Galope. All rights reserved.
-          </p>
-          <button className="flex items-center">
-            <Link to="home" spy={true} smooth={true} offset={0} duration={500}>
-              <img
-                alt="Angelo2"
-                className="w-[17px] md:w-[27px] h-[17px] md:h-[27px] left-[1708px] top-[2736px]"
-                src="images/3 1.png"
-              />
-            </Link>
-          </button>
-        </div>
-      </div>
+      { !loading && <Footer/> }
     </div>
   );
 }

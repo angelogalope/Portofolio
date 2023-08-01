@@ -20,4 +20,37 @@
       filter: none; /* Remove the grayscale filter on hover */
       transform: scale(1.1); /* Apply the scale effect on hover */
     }
+
+    /* Custom animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Custom animation delay */
+@keyframes delayFadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Add animation class to apply fade-in animation */
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-in;
+}
+
+/* Add animation class to apply fade-in animation with a delay */
+.animate-delay {
+  animation: delayFadeIn 1.5s ease-in;
+}
   }
