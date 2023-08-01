@@ -5,7 +5,19 @@
     .text-shadow-md {
       text-shadow: 8px 8px 10px rgba(0, 0, 0, 0.486);
     }
+
     .text-shadow-whitemd {
       text-shadow: 8px 8px 10px rgba(243, 243, 243, 0.3);
+    }
+
+    .grayscale-img {
+      filter: grayscale(100%);
+      /* You can also add additional transition properties for a smoother effect */
+      transition: filter 0.5s ease, transform .3s ease; /* Added 'transform' property for the scale effect */
+    }
+
+    .grayscale-img:hover {
+      filter: none; /* Remove the grayscale filter on hover */
+      transform: scale(1.1); /* Apply the scale effect on hover */
     }
   }

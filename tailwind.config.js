@@ -3,12 +3,12 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   darkMode: "class", // or 'media' or 'class'
   theme: {
-    sreens: {
+    screens: {
       sm: "320px",
       md: "766px",
       lg: "1024px",
       xl: "1280px",
-      "2xl": "1536",
+      "2xl": "1536px",
     },
     extend: {
       fontFamily: {

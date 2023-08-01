@@ -11,7 +11,7 @@ import Navbar from "./components/Navbar";
 const HeroSection = ({ darkMode }) => {
 
   return (
-    <div className={`flex flex-col md:flex-row-reverse py-[30px] sm:py-[60px] md:py-[90px] justify-between ${darkMode ? "bg-dark-300 transition-all duration-500" : "bg-white transition-all duration-500"}`}>
+    <div className={`flex flex-col z-10 md:flex-row-reverse py-[30px] sm:py-[60px] md:py-[90px] justify-between ${darkMode ? "bg-dark-300 transition-all duration-500" : "bg-white transition-all duration-500"}`}>
       <div className="flex flex-col md:flex-row items-center">
       <img
           alt="Angelo2"
@@ -51,7 +51,7 @@ const HeroSection = ({ darkMode }) => {
         <div className="sm:text-[20px] font-semibold">
           Angelo Galope, pursuing BS in
         </div>
-        <div className={`text-[30px] sm:text-[48px] font-extrabold ${darkMode ? "text-white text-shadow-whitemd" : "text-shadow-md"}`}>
+        <div className={`text-[30px] font-Poppins sm:text-[48px] font-extrabold ${darkMode ? "text-white text-shadow-whitemd" : "text-shadow-md"}`}>
           <h1 className="">
             Information <span className="ml-[100px] md:ml-[160px]">Technology</span>
           </h1>
@@ -96,7 +96,7 @@ function App() {
         <HeroSection darkMode={darkMode} />
 
         {/* About Section */}
-        <div id="about" className="flex flex-col sm:flex-row  justify-between items-center py-[50px] md:py-[150px]">
+        <div id="about" className="flex flex-col sm:flex-row justify-between items-center py-[50px] md:py-[150px]">
           <img
           alt="Angelo2"
           className={`w-[243px] h-[243px] sm:w-[343px] sm:h-[343px] transition-opacity duration-700 ${
@@ -116,7 +116,7 @@ function App() {
               About me
             </div>
             <div className="text-[12px] md:text-[16px] font-normal text-center md:text-start">
-              As a second-year student at Caraga State University, I find myself
+              As a third year student at Caraga State University, I find myself
               pursuing a Bachelor of Science degree in Information Technology.
               Although it wasn't initially my area of interest, I've been
               influenced by the people around me who are enthusiastic about
@@ -141,50 +141,53 @@ function App() {
             <div class="grid grid-cols-2 md:grid-cols-5 justify-center items-center gap-[59px] md:gap-[99px]">
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/Mysql.png"
               />
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/Figma.png"
               />
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/Java.png"
               />
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/React.png"
               />
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/devicon_tailwindcss.png"
               />
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-[59px] md:gap-[99px] mt-10">
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/Css3.png"
               />
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/Html5.png"
               />
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/Javascript.png"
               />
               <img
                 alt="Angelo2"
-                className="w-[55px] h-[55px] hover:scale-110 duration-500"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/C.png"
+              />
+              <img
+                alt="Angelo2"
+                className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
+                src="images/Photoshop.png"
               />
             </div>
           </div>
