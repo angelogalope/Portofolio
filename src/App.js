@@ -1,19 +1,29 @@
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 import { useState } from "react";
 import "./App.css";
 import { Link } from "react-scroll";
-import { BsFacebook, BsYoutube, BsGithub, BsFillPersonFill } from "react-icons/bs";
+import {
+  BsFacebook,
+  BsYoutube,
+  BsGithub,
+  BsFillPersonFill,
+} from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
 import { AiFillInstagram, AiFillPhone } from "react-icons/ai";
 import { BiLogoGmail } from "react-icons/bi";
 import Navbar from "./components/Navbar";
 
 const HeroSection = ({ darkMode }) => {
-
   return (
-    <div className={`flex flex-col z-10 md:flex-row-reverse py-[30px] sm:py-[60px] md:py-[90px] justify-between ${darkMode ? "bg-dark-300 transition-all duration-500" : "bg-white transition-all duration-500"}`}>
+    <div
+      className={`flex flex-col z-10 md:flex-row-reverse py-[30px] sm:py-[60px] md:py-[90px] justify-between ${
+        darkMode
+          ? "bg-dark-300 transition-all duration-500"
+          : "bg-white transition-all duration-500"
+      }`}
+    >
       <div className="flex flex-col md:flex-row items-center">
-      <img
+        <img
           alt="Angelo2"
           className={`w-[243px] h-[243px] md:w-[343px] md:h-[343px] transition-opacity duration-700 ${
             darkMode ? "opacity-0 absolute" : "opacity-100"
@@ -29,36 +39,41 @@ const HeroSection = ({ darkMode }) => {
         />
         <div className="flex flex-row items-center md:flex-col gap-6 py-5">
           <a href="https://www.facebook.com/gzelogal/">
-            <BsFacebook className="w-[36px] h-[36px] hover:scale-110 duration-300"/>
+            <BsFacebook className="w-[36px] h-[36px] hover:scale-110 duration-300" />
           </a>
           <a href="https://www.instagram.com/datboijero/">
-            <AiFillInstagram className="w-[36px] h-[36px] hover:scale-110 duration-300"/>
+            <AiFillInstagram className="w-[36px] h-[36px] hover:scale-110 duration-300" />
           </a>
           <a href="https://www.tiktok.com/@gzelo_o">
-            <FaTiktok className="w-[34px] h-[34px] hover:scale-110 duration-300"/>
+            <FaTiktok className="w-[34px] h-[34px] hover:scale-110 duration-300" />
           </a>
           <a href="https://www.youtube.com/channel/UCQbPRkGcJmO6wkKQ0wFwp3Q">
-            <BsYoutube className="w-[34px] h-[34px] hover:scale-110 duration-300"/>
+            <BsYoutube className="w-[34px] h-[34px] hover:scale-110 duration-300" />
           </a>
           <a href="https://github.com/angelogalope">
-            <BsGithub className="w-[34px] h-[34px] hover:scale-110 duration-300"/>
+            <BsGithub className="w-[34px] h-[34px] hover:scale-110 duration-300" />
           </a>
         </div>
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col w-[300px] md:w-[500px]">
         <div className="text-gray-400 md:text-[20px] font-medium">Hi! I am</div>
         <div className="md:text-[20px] font-semibold">
           Angelo Galope, pursuing BS in
         </div>
-        <div className={`text-[30px] font-Poppins md:text-[48px] font-extrabold ${darkMode ? "text-white text-shadow-whitemd" : "text-shadow-md"}`}>
+        <div
+          className={`text-[30px] font-Poppins md:text-[48px] font-extrabold ${
+            darkMode ? "text-white text-shadow-whitemd" : "text-shadow-md"
+          }`}
+        >
           <h1 className="">
-            Information <span className="ml-[100px] md:ml-[160px]">Technology</span>
+            Information{" "}
+            <span className="ml-[100px] md:ml-[160px]">Technology</span>
           </h1>
         </div>
         <div class="text-[12px] md:text-[18px] py-5 w-[300px] md:w-[500px]">
-          A newbie tech dweeb determined to dive into the world of
-          technology with passion and drive.
+          A newbie tech dweeb determined to dive into the world of technology
+          with passion and drive.
         </div>
         <button>
           <Link
@@ -66,9 +81,11 @@ const HeroSection = ({ darkMode }) => {
             smooth={true}
             offset={0}
             duration={500}
-            class={`w-[129px] h-[39px] flex items-center justify-center  rounded-lg space-x-2 hover:scale-110 duration-300 ${darkMode ? "bg-white text-black" : "bg-black text-white"}`}
+            class={`w-[129px] h-[39px] flex items-center justify-center  rounded-lg space-x-2 hover:scale-110 duration-300 ${
+              darkMode ? "bg-white text-black" : "bg-black text-white"
+            }`}
           >
-            <BsFillPersonFill size={20}/>
+            <BsFillPersonFill size={20} />
             <div class="text-[14px] font-normal">About Me</div>
           </Link>
         </button>
@@ -83,12 +100,18 @@ function App() {
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode);
   };
-  
-  return (
-    <div id="home" className={`${darkMode ? "bg-dark-300 text-white transition-all duration-500" : "bg-white transition-all duration-500"}`}>
-      <Analytics />
-      <div className="flex flex-col w-full h-full pt-5 px-[25px] md:px-[150px]"> 
 
+  return (
+    <div
+      id="home"
+      className={`${
+        darkMode
+          ? "bg-dark-300 text-white transition-all duration-500"
+          : "bg-white transition-all duration-500"
+      }`}
+    >
+      <Analytics />
+      <div className="flex flex-col w-full h-full pt-5 px-[25px] md:px-[150px]">
         {/* Navigation Bar */}
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
@@ -96,21 +119,24 @@ function App() {
         <HeroSection darkMode={darkMode} />
 
         {/* About Section */}
-        <div id="about" className="flex flex-col md:flex-row justify-between items-center py-[50px] md:py-[150px]">
+        <div
+          id="about"
+          className="flex flex-col md:flex-row justify-between items-center py-[50px] md:py-[150px]"
+        >
           <img
-          alt="Angelo2"
-          className={`w-[243px] h-[243px] md:w-[343px] md:h-[343px] transition-opacity duration-700 ${
-            darkMode ? "opacity-0 absolute" : "opacity-100"
-          }`}
-          src="images/Untitled design (6) 1.png"
-        />
-        <img
-          alt="Angelo2"
-          className={`w-[243px] h-[243px] md:w-[343px] md:h-[343px] transition-opacity duration-700 ${
-            darkMode ? "opacity-100" : "opacity-0 absolute"
-          }`}
-          src="images/gray-circle.png"
-        />
+            alt="Angelo2"
+            className={`w-[243px] h-[243px] md:w-[343px] md:h-[343px] transition-opacity duration-700 ${
+              darkMode ? "opacity-0 absolute" : "opacity-100"
+            }`}
+            src="images/Untitled design (6) 1.png"
+          />
+          <img
+            alt="Angelo2"
+            className={`w-[243px] h-[243px] md:w-[343px] md:h-[343px] transition-opacity duration-700 ${
+              darkMode ? "opacity-100" : "opacity-0 absolute"
+            }`}
+            src="images/gray-circle.png"
+          />
           <div className="flex flex-col sm:justify-center items-center md:items-start pt-5 md:space-y-10">
             <div className="h-[70px] text-[30px] md:text-[44px] font-semibold">
               About me
@@ -138,54 +164,54 @@ function App() {
             Tailwind CSS for efficient and responsive web development.
           </div>
           <div class="justify-center items-center mt-10">
-            <div class="grid grid-cols-2 md:grid-cols-5 justify-center items-center gap-[59px] md:gap-[99px]">
+            <div class="grid grid-cols-2 md:grid-cols-5 justify-center items-center gap-[59px] md:gap-[79px]">
               <img
-                alt="Angelo2"
+                alt="MySQL"
                 className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/Mysql.png"
               />
               <img
-                alt="Angelo2"
+                alt="Figma"
                 className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/Figma.png"
               />
               <img
-                alt="Angelo2"
+                alt="Java"
                 className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/Java.png"
               />
               <img
-                alt="Angelo2"
+                alt="React"
                 className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/React.png"
               />
               <img
-                alt="Angelo2"
+                alt="Tailwindcss"
                 className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/devicon_tailwindcss.png"
               />
               <img
-                alt="Angelo2"
+                alt="CSS3"
                 className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/Css3.png"
               />
               <img
-                alt="Angelo2"
+                alt="Html5"
                 className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/Html5.png"
               />
               <img
-                alt="Angelo2"
+                alt="JavaScript"
                 className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/Javascript.png"
               />
               <img
-                alt="Angelo2"
+                alt="C"
                 className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/C.png"
               />
               <img
-                alt="Angelo2"
+                alt="Photoshop"
                 className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
                 src="images/Photoshop.png"
               />
@@ -220,20 +246,22 @@ function App() {
       >
         <div className="flex flex-col justify-center md:flex-row gap-2 md:gap-10">
           <div className="self-stretch justify-start items-center gap-2.5 inline-flex">
-          <BiLogoGmail className="md:w-[27px] md:h-[27px] text-white"/>
+            <BiLogoGmail className="md:w-[27px] md:h-[27px] text-white" />
             <div className="text-white text-[10px] md:text-[14px]">
               angelo.galope03@gmail.com
             </div>
           </div>
           <div className="top-[2736px]justify-start items-center gap-2.5 inline-flex">
-            <AiFillPhone className="md:w-[27px] md:h-[27px] text-white"/>
+            <AiFillPhone className="md:w-[27px] md:h-[27px] text-white" />
             <div className="text-white text-[10px] md:text-[14px]">
               (085) 303 6214
             </div>
           </div>
         </div>
         <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-2 md:gap-5">
-          <p className="text-white text-[6px] md:text-[12px]">© 2023 Angelo Galope. All rights reserved.</p>
+          <p className="text-white text-[6px] md:text-[12px]">
+            © 2023 Angelo Galope. All rights reserved.
+          </p>
           <button className="flex items-center">
             <Link to="home" spy={true} smooth={true} offset={0} duration={500}>
               <img
@@ -243,9 +271,8 @@ function App() {
               />
             </Link>
           </button>
-      </div>
         </div>
-        
+      </div>
     </div>
   );
 }
