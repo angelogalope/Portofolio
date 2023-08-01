@@ -63,7 +63,7 @@ const HeroSection = ({ darkMode }) => {
           Angelo Galope, pursuing BS in
         </div>
         <div
-          className={`text-[30px] font-Poppins md:text-[48px] font-extrabold ${
+          className={`text-[30px] sm:text-[34px] md:text-[48px] font-extrabold ${
             darkMode ? "text-white text-shadow-whitemd" : "text-shadow-md"
           }`}
         >
