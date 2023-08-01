@@ -105,6 +105,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                   offset={0}
                   duration={500}
                   onClick={toggleMenu}
+                  className="block"
                 >
                   About
                 </Link>
@@ -117,6 +118,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                   offset={0}
                   duration={500}
                   onClick={toggleMenu}
+                  className="block"
                 >
                   Stack
                 </Link>
@@ -129,6 +131,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                   offset={0}
                   duration={500}
                   onClick={toggleMenu}
+                  className="block"
                 >
                   Projects
                 </Link>
@@ -141,6 +144,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                   offset={0}
                   duration={500}
                   onClick={toggleMenu}
+                  className="block"
                 >
                   Contact
                 </Link>
