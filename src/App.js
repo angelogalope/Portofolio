@@ -76,7 +76,7 @@ const HeroSection = ({ darkMode }) => {
           A newbie tech dweeb determined to dive into the world of technology
           with passion and drive.
         </div>
-        <button>
+        <button className="w-[129px]">
           <Link
             to="about"
             smooth={true}
