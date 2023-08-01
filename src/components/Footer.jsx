@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 
 const Footer = () => {
     return (
-      <div className=" bottom-0 left-0 w-full h-[80px] bg-black text-white text-[12px] md:text-[14px] py-2 px-[25px] md:px-[150px] flex md:flex-row justify-between items-center">
+      <div id="contact" className="bottom-0 left-0 w-full h-[80px] bg-black text-white text-[12px] md:text-[14px] py-2 px-[25px] md:px-[150px] flex md:flex-row justify-between items-center">
         <div className="flex flex-col md:flex-row gap-2 md:gap-10">
           <div className="flex items-center gap-2.5">
             <BiLogoGmail className="md:w-[27px] md:h-[27px]" />
