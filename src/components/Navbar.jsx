@@ -136,7 +136,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                   Projects
                 </Link>
               </button>
-              <button className="text-[14px] hover:text-slate-400 py-2">
+              <button className="text-[14px] hover:text-slate-400 py-2 px-4 w-full">
                 <Link
                   to="contact"
                   spy={true}
