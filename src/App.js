@@ -47,16 +47,16 @@ const HeroSection = ({ darkMode }) => {
       </div>
 
       <div className="flex flex-col sm:w-[395px] md:w-[495px] lg:w-[595px]">
-        <div className="text-gray-400 sm:text-[20px] font-medium">Hi! I am</div>
-        <div className="sm:text-[20px] font-semibold">
+        <div className="text-gray-400 md:text-[20px] font-medium">Hi! I am</div>
+        <div className="md:text-[20px] font-semibold">
           Angelo Galope, pursuing BS in
         </div>
-        <div className={`text-[30px] font-Poppins sm:text-[48px] font-extrabold ${darkMode ? "text-white text-shadow-whitemd" : "text-shadow-md"}`}>
+        <div className={`text-[30px] font-Poppins md:text-[48px] font-extrabold ${darkMode ? "text-white text-shadow-whitemd" : "text-shadow-md"}`}>
           <h1 className="">
             Information <span className="ml-[100px] md:ml-[160px]">Technology</span>
           </h1>
         </div>
-        <div class="text-[12px] sm:text-[18px] py-5">
+        <div class="text-[12px] md:text-[18px] py-5">
           A newbie tech dweeb determined to dive into the world of
           technology with passion and drive.
         </div>
