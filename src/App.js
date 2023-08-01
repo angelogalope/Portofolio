@@ -56,7 +56,7 @@ const HeroSection = ({ darkMode }) => {
             Information <span className="ml-[100px] md:ml-[160px]">Technology</span>
           </h1>
         </div>
-        <div class="text-[12px] md:text-[18px] py-5">
+        <div class="text-[12px] md:text-[18px] py-5 w-[300px] md:w-[500px]">
           A newbie tech dweeb determined to dive into the world of
           technology with passion and drive.
         </div>
@@ -115,7 +115,7 @@ function App() {
             <div className="h-[70px] text-[30px] md:text-[44px] font-semibold">
               About me
             </div>
-            <div className="text-[12px] md:text-[16px] font-normal text-center md:text-start">
+            <div className="text-[16px] font-normal text-center md:text-start">
               As a third year student at Caraga State University, I find myself
               pursuing a Bachelor of Science degree in Information Technology.
               Although it wasn't initially my area of interest, I've been
@@ -131,7 +131,7 @@ function App() {
           <div id="stack" className="text-[30px] md:text-[44px] font-semibold">
             Technology Stacks
           </div>
-          <div className="text-center text-[12px] md:text-[16px] font-normal pt-[30px]">
+          <div className="text-center text-[16px] font-normal pt-[30px]">
             While proficient in some areas, I'm actively learning and
             practicing, like diving deeper into advanced JavaScript concepts, as
             well as mastering React's technicalities and honing my skills into
