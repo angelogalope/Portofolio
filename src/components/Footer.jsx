@@ -9,15 +9,15 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row gap-2 md:gap-10">
           <div className="flex items-center gap-2.5">
             <BiLogoGmail className="md:w-[27px] md:h-[27px]" />
-            <p className="text-[8px] sm:text-[12px]">angelo.galope03@gmail.com</p>
+            <p className="text-[6px] sm:text-[12px]">angelo.galope03@gmail.com</p>
           </div>
           <div className="flex items-center gap-2.5">
             <AiFillPhone className="md:w-[27px] md:h-[27px]" />
-            <p className="text-[8px] sm:text-[12px]">(085) 303 6214</p>
+            <p className="text-[6px] sm:text-[12px]">(085) 303 6214</p>
           </div>
         </div>
         <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-2 md:gap-5">
-          <p className="text-[8px] sm:text-[12px]">© 2023 Angelo Galope. All rights reserved.</p>
+          <p className="text-[6px] sm:text-[12px]">© 2023 Angelo Galope. All rights reserved.</p>
           <button>
             <Link
               to="home"
