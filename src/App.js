@@ -46,7 +46,7 @@ const HeroSection = ({ darkMode }) => {
         </div>
       </div>
 
-      <div className="flex flex-col sm:w-[395px] md:w-[495px] lg:w-[595px]">
+      <div className="flex flex-col">
         <div className="text-gray-400 md:text-[20px] font-medium">Hi! I am</div>
         <div className="md:text-[20px] font-semibold">
           Angelo Galope, pursuing BS in
