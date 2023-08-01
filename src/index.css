@@ -46,7 +46,7 @@
 
 /* Add animation class to apply fade-in animation */
 .animate-fade-in {
-  animation: fadeIn 1.5s ease-in;
+  animation: fadeIn 4.5s ease-in;
 }
 
 /* Add animation class to apply fade-in animation with a delay */
