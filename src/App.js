@@ -58,13 +58,13 @@ const HeroSection = ({ darkMode }) => {
       </div>
 
       <div className="flex flex-col w-[300px] md:w-[500px]">
-        <div className="text-gray-400 md:text-[20px] font-medium">Hi! I am</div>
-        <div className="md:text-[20px] font-semibold">
+        <p className="text-gray-400 md:text-[20px] font-medium">Hi! I am</p>
+        <p className="md:text-[20px] font-semibold">
           Angelo Galope, pursuing BS in
-        </div>
+        </p>
         <div
           className={`text-[30px] sm:text-[34px] md:text-[48px] font-extrabold ${
-            darkMode ? "text-white text-shadow-whitemd" : "text-shadow-md"
+            darkMode ? "text-white text-shadow-white-md" : "text-shadow-md"
           }`}
         >
           <h1 className="">
@@ -72,22 +72,22 @@ const HeroSection = ({ darkMode }) => {
             <span className="ml-[100px] md:ml-[160px]">Technology</span>
           </h1>
         </div>
-        <div class="text-[12px] md:text-[18px] py-5 w-[300px] md:w-[500px]">
+        <p className="text-[12px] md:text-[18px] py-5 w-[300px] md:w-[500px]">
           A newbie tech dweeb determined to dive into the world of technology
           with passion and drive.
-        </div>
+        </p>
         <button className="w-[129px]">
           <Link
             to="about"
             smooth={true}
             offset={0}
             duration={500}
-            class={`w-[129px] h-[39px] flex items-center justify-center  rounded-lg space-x-2 hover:scale-110 duration-300 ${
+            className={`w-[129px] h-[39px] flex items-center justify-center  rounded-lg space-x-2 hover:scale-110 duration-300 ${
               darkMode ? "bg-white text-black" : "bg-black text-white"
             }`}
           >
             <BsFillPersonFill size={20} />
-            <div class="text-[14px] font-normal">About Me</div>
+            <div className="text-[14px] font-normal">About Me</div>
           </Link>
         </button>
       </div>
@@ -151,36 +151,38 @@ function App() {
               src="images/gray-circle.png"
             />
             <div className="flex flex-col sm:justify-center items-center md:items-start pt-5 md:space-y-10">
-              <div className="h-[70px] text-[30px] md:text-[44px] font-semibold">
+              <h1 className="h-[70px] text-[30px] md:text-[44px] font-semibold">
                 About me
-              </div>
-              <div className="text-[16px] font-normal text-center md:text-start">
+              </h1>
+              <p className="text-[16px] font-normal text-center md:text-start">
                 As a third year student at Caraga State University, I find
                 myself pursuing a Bachelor of Science degree in Information
                 Technology. Although it wasn't initially my area of interest,
                 I've been influenced by the people around me who are
                 enthusiastic about technology. Their passion and excitement for
                 the field inspired me to explore Information Technology further.
-              </div>
+                Now, I am one of the startup incubatees at Navigatú with the people
+                who influence me.
+              </p>
             </div>
           </div>
 
           {/* Stack Section */}
           <div className="flex flex-col items-center text-center py-[150px]">
-            <div
+            <h1
               id="stack"
               className="text-[30px] md:text-[44px] font-semibold"
             >
               Technology Stacks
-            </div>
-            <div className="text-center text-[16px] font-normal pt-[30px]">
+            </h1>
+            <p className="text-center text-[16px] font-normal pt-[30px]">
               While proficient in some areas, I'm actively learning and
               practicing, like diving deeper into advanced JavaScript concepts,
               as well as mastering React's technicalities and honing my skills
               into Tailwind CSS for efficient and responsive web development.
-            </div>
-            <div class="justify-center items-center mt-10">
-              <div class="grid grid-cols-2 md:grid-cols-5 justify-center items-center gap-[59px] md:gap-[79px]">
+            </p>
+            <div className="justify-center items-center mt-10">
+              <div className="flex flex-wrap justify-center items-center gap-[59px] md:gap-[79px]">
                 <img
                   alt="MySQL"
                   className="w-[55px] h-[55px] hover:scale-110 duration-500 md:grayscale-img"
@@ -237,21 +239,71 @@ function App() {
 
           {/* Projects Section */}
           <div className="flex flex-col items-center py-[150px] space-y-10">
-            <div
+            <h1
               id="project"
               className="wtext-zinc-950 text-[30px] md:text-[44px] font-semibold"
             >
               My Projects
-            </div>
-            <div className="text-[16px] font-normal text-center">
+            </h1>
+            <p className="text-[16px] font-normal text-center">
               {" "}
-              I worked on diverse school projects involving a mix of programming
+              I worked on diverse school and personal projects involving a mix of programming
               languages and frameworks. I actively sought to enhance my skills
               and knowledge, making each project a valuable learning experience.
-            </div>
-            <div className="flex justify-center border rounded-lg w-full h-[250px] text-gray-500 py-10">
-              ---Personal Projects Here---
-            </div>
+            </p>
+            
+
+<div id="indicators-carousel" class="relative w-full" data-carousel="static">
+    
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+        
+        <div class=" duration-700 ease-in-out" data-carousel-item="active">
+            <img src="projects/MelloWeather.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        </div>
+        
+        <div class=" duration-700 ease-in-out" data-carousel-item>
+            <img src="projects/ReviewUP.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        </div>
+        
+        <div class=" duration-700 ease-in-out" data-carousel-item>
+            <img src="projects/MessageMe.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        </div>
+        
+        <div class=" duration-700 ease-in-out" data-carousel-item>
+            <img src="projects/MelloWeather.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        </div>
+        
+        <div class=" duration-700 ease-in-out" data-carousel-item>
+            <img src="projects/MelloWeather.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        </div>
+    </div>
+    
+    <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+    </div>
+   
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
           </div>
         </div>
       )}
