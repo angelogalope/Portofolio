@@ -26,7 +26,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   };
 
   return (
-    <div className={`sticky top-0 z-20 ${darkMode ? "bg-dark-300 text-white transition-all duration-500" : "bg-white transition-all duration-500"}`}>
+    <div className={`sticky top-0 z-20 pt-2 ${darkMode ? "bg-dark-100 text-white transition-all duration-500" : "bg-white transition-all duration-500"}`}>
       <div className="flex items-center justify-between">
         <button>
           <Link to="home" spy={true} smooth={true} offset={0} duration={500}>
@@ -54,17 +54,17 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         {/* Desktop Navigation */}
         {!isMobile && (
           <div className="flex gap-20">
-            <button className="text-[14px] font-semibold hover:text-slate-400">
+            <button className="text-[14px] font-semibold hover:text-slate-400 duration-500">
               <Link to="about" spy={true} smooth={true} offset={0} duration={500}>
                 About
               </Link>
             </button>
-            <button className="text-[14px] font-semibold hover:text-slate-400">
+            <button className="text-[14px] font-semibold hover:text-slate-400 duration-500">
               <Link to="stack" spy={true} smooth={true} offset={0} duration={500}>
                 Stack
               </Link>
             </button>
-            <button className="text-[14px] font-semibold hover:text-slate-400">
+            <button className="text-[14px] font-semibold hover:text-slate-400 duration-500">
               <Link
                 to="project"
                 spy={true}
@@ -75,7 +75,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 Projects
               </Link>
             </button>
-            <button className="text-[14px] font-semibold hover:text-slate-400">
+            <button className="text-[14px] font-semibold hover:text-slate-400 duration-500">
               <Link
                 to="contact"
                 spy={true}
@@ -152,8 +152,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </div>
           </div>
         )}
-
-      <div className="flex border border-black"></div>
+      <div className={`${darkMode ? "flex border border-gray-600 mt-2" : "flex border border-gray-300 mt-2"}`} ></div>
     </div>
   );
 };
